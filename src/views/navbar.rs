@@ -1,6 +1,9 @@
 use dioxus::prelude::*;
 
-use crate::{Route, functions::navbar_css::{Page, page_select_css}};
+use crate::{
+    functions::navbar_css::{page_select_css, Page},
+    Route,
+};
 
 const LOGO_LARGE_SVG: Asset = asset!("/assets/SVGs/logo_large.svg");
 const LOGO_SMALL_SVG: Asset = asset!("/assets/SVGs/logo_small.svg");
@@ -31,7 +34,7 @@ pub fn Navbar() -> Element {
                             },
                         }
 
-                        div { class: "flex-1 grid grid-cols-4 text-center min-w-fit md:min-w-1/2 content-center",
+                        div { class: "flex flex-1 grid grid-cols-4 text-center min-w-fit md:min-w-1/2 content-center",
                             div {class: "col-span-3"}
                             Link { class: page_select_css(Page::Login),
                                 to: Route::Login {}, a {class:"hidden md:inline", "Login"} img {class: "inline md:hidden", src: LOGOUT_SVG}

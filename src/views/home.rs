@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 
-use crate::{PAGE, functions::navbar_css::Page};
+use crate::{functions::navbar_css::Page, PAGE};
 
 #[component]
 pub fn Home() -> Element {

@@ -1,7 +1,7 @@
 use dioxus::prelude::*;
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 
-use crate::{PAGE, functions::navbar_css::Page};
+use crate::{functions::navbar_css::Page, PAGE};
 
 #[derive(Serialize, Deserialize)]
 pub struct LoginForm {
@@ -23,12 +23,12 @@ pub fn Login() -> Element {
             br {}
             p {class:"text-xl", "Welcome to gruppr.dev"}
 
-            div { class: "flex flex-col justify-center px-6 py-12 lg:px-8",
-                div { class: "sm:mx-auto sm:w-full sm:max-w-sm", 
+            div { class: "justify-center px-6 py-12 lg:px-8",
+                div { class: "sm:mx-auto sm:w-full sm:max-w-sm",
                     h2 {class: "mt-10 text-center text-2xl/9 font-bold tracking-tight text-black", "Sign in to your account" }
                 }
 
-                
+
             }
         }
     }
